@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Blog using Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .navbar{
+            background-color: black;
+            color: white;
+            padding: 10px 50px;
+        }
+        .media-body{
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" style="user-select: auto;">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Icoder</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav ">
+                    <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Topics <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="#">Topics</a></li> -->
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Coding</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Write for Us</a></li>
+                            <!-- <li role="separator" class="divider"></li> -->
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right ">
+                    <div class="form-group ">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default mx=4 ">Search</button>
+                    <div class="form-group">
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#loginmodal">Login</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+                        
+                    </div>
+                </form>
+               
+               
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+     <!-- login modal -->
+
+     <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodallabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="loginmodal">Login to Icoder</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+
+    </div><!-- /.modal -->
+
+    <!-- sign up modal -->
+
+    <div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="signupmodallabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title " id="signupmodal">Join Icoder for free</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+
+    </div><!-- /.modal -->
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/coding.webp" alt="...">
+                <div class="carousel-caption">
+                    <h3>Coding is future</h3>
+                    <p>join us to learn for free</p>
+                    <button type="button" class="btn btn-primary btn-sm">Apply here</button>
+                    <button type="button" class="btn btn-danger btn-sm">Know more</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/laptop.jpeg" alt="...">
+                <div class="carousel-caption">
+                    <h3>Latest Technology</h3>
+                    <p>everything for free</p>
+                    <button type="button" class="btn btn-primary btn-sm">Apply here</button>
+                    <button type="button" class="btn btn-danger btn-sm">Know more</button>
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/crypto.jpeg" alt="...">
+                <div class="carousel-caption">
+                    <h3>Crypto Currency</h3>
+                    <p>the future of currencies</p>
+                    <button type="button" class="btn btn-primary btn-sm">Apply here</button>
+                    <button type="button" class="btn btn-danger btn-sm">Know more</button>
+
+                </div>
+            </div>
+            ...
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+    <div class="media">
+        <div class="media-left">
+            <a href="">
+                <img class="media-object" src="images/sm1.webp" alt="...">
+            </a>
+        </div>
+        <div class="media-body" >
+            <h2 class="media-heading">Nft's</h2>
+            A non-fungible token (NFT) is a financial security consisting of digital data stored in a blockchain, a form
+            of distributed ledger. The ownership of an NFT is recorded in the blockchain, and can be transferred by the
+            owner, allowing NFTs to be sold and traded.NFTs have fundamentally changed the market for digital assets. Historically there was no way to separate the “owner” of a digital artwork from someone who just saved a copy to their desktop. Markets can’t operate without clear property rights: Before someone can buy a good, it has to be clear who has the right to sell it, and once someone does buy, you need to be able to transfer ownership from the seller to the buyer.
+            <br> NFTs solve this problem by giving parties something they can agree represents ownership. In doing so, they make it possible to build markets around new types of transactions — buying and selling products that could never be sold before, or enabling transactions to happen in innovative ways that are more efficient and valuable.
+            <br> <br>
+            As the name “non-fungible token” suggests, each NFT is a unique, one-of-a-kind digital item. They’re stored on public-facing digital ledgers called blockchains, which means it’s possible to prove who owns a given NFT at any moment in time and trace the history of prior ownership. Moreover, it’s easy to transfer NFTs from one person to another — just as a bank might move money across accounts — and it’s very hard to counterfeit them. Because NFT ownership is easy to certify and transfer, we can use them to create markets in a variety of different goods.
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="images/sm2100.webp" alt="...">
+            </a>
+        </div>
+        <div class="media-body">
+            <h2 class="media-heading">Gaming</h2>
+            Gamers have known for a long time something that everyone else is starting to figure out: there’s community
+            connection on the other side of a screen. <br>
+            Playing video games, including violent shooter games, may boost children's learning, health and social skills, according to a review of research in American Psychologist. <br><br>
+
+            The study comes out as debate continues among psychologists and other health professionals regarding the effects of violent media on youth. An APA task force is conducting a comprehensive review of research on violence in video games and interactive media and will release its findings later this <br> <br>
+                
+            "Important research has already been conducted for decades on the negative effects of gaming, including addiction, depression and aggression, and we are certainly not suggesting that this should be ignored," says Isabela Granic, <br>
+            PhD, of Radboud University Nijmegen in The Netherlands, lead author of the article. "However, to understand the impact of video games on children's and adolescents' development, a more balanced perspective is needed."
+        </div>
+    </div>
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
